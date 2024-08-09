@@ -8,7 +8,6 @@
     , $propertyDeps = {};
 
   for ($property in $schema) {
-    if ($property == '__proto__') continue;
     var $sch = $schema[$property];
     var $deps = Array.isArray($sch) ? $propertyDeps : $schemaDeps;
     $deps[$property] = $sch;
